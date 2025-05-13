@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+.container,
+.plate,
+.lamp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    height: max-content;
+    background: #222;
+}
+
+.container {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+}
+
+.plate {
+    height: 100px;
+    width: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #eeeeee;
+}
+
+.switch {
+    height: 45px;
+    width: 30px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    border-radius: 6px;
+    background: linear-gradient(180deg, #777 0%, #fff 32%);
+}
+
+.switch.on {
+    margin-top: 5px;
+    background: linear-gradient(0deg, #777 0%, #fff 32%);
+}
+
+.lamp {
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    width: 50%;
+}
+
+.bulb-socket {
+    width: 140px;
+    background: black;
+    border-width: 80px 0 0 0;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px 30px 0 0;
+    margin: 0 0 0 0;
+}
+
+.bulb {
+    width: 200px;
+    height: 200px;
+    background: #555;
+    border-radius: 50%;
+}
+
+.bulb.on {
+    box-shadow: 
+    0 0 100px #fff,
+    0 0 120px #fff,
+    0 0 50px rgb(255, 217, 0);
+    background: #fff;
+}
+
+.bulb::before {
+    content: "";
+    position: absolute;
+    transform: translateX(50%) translateY(-40%);
+    width: 100px;
+    height: 50px;
+    background: #555;
+    z-index: -1;
+}
+
+.bulb.on::before {
+    background: #fff;
+}
+
+.support {
+    width: 200px;
+    height: 40px;
+    background: black;
+    transform: translateY(-30%);
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
