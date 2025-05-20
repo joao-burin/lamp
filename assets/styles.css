@@ -102,3 +102,22 @@ body {
     border-bottom-right-radius: 100px;
     border-bottom-left-radius: 100px;
 }
+
+.string {
+    width: 5px;
+    height: 300px;
+    background: black;
+    transform: translateY(-5%);
+    margin-bottom: -20px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 760px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .plate {
+        margin-top: 50%;
+    }
+}
